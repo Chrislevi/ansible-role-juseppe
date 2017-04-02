@@ -1,5 +1,9 @@
 ---
 
+- set_fact:
+    juseppe_container_name: "{{ nexus_docker_url }}"
+  when: cj_nexus
+
 - name: "Run juseppe container"
   docker_container:
     name: "{{ juseppe_container_hostname }}"
